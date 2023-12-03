@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <h2 class="head">Calculattor</h2>
+        <tr>
+          <td><label for="">1st number:</label></td>
+          <td><input type="text" id="inputNum1" /></td>
+        </tr>
+        <tr>
+          <td><label for="">2st number:</label></td>
+          <td><input type="text" id="inputNum2" /></td>
+        </tr>
+        <tr class="buttons">
+          <td>
+            <input type="button" value="Plus" onclick="plus()" />
+            <input type="button" value="Subtract" onclick="Sub()" />
+          </td>
+          <td>
+            <input type="button" value="Multiply" onclick="Multi()" />
+            <input type="button" value="Divide" onclick="Div()" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Show the Result:</p>
+          </td>
+          <td>
+            <p id="result"></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+<script>
+  function plus() {
+    var num1 = document.getElementById("inputNum1").value;
+    var num2 = document.getElementById("inputNum2").value;
+
+    num1 = parseInt(num1, 10);
+    num2 = parseInt(num2, 10);
+    var sum = num1 + num2;
+    document.getElementById("result").innerHTML = sum;
+  }
+  function Sub() {
+    var num1 = document.getElementById("inputNum1").value;
+    var num2 = document.getElementById("inputNum2").value;
+
+    num1 = parseInt(num1, 10);
+    num2 = parseInt(num2, 10);
+    var sum = num1 - num2;
+    document.getElementById("result").innerHTML = sum;
+  }
+  function Multi() {
+    var num1 = document.getElementById("inputNum1").value;
+    var num2 = document.getElementById("inputNum2").value;
+
+    num1 = parseInt(num1, 10);
+    num2 = parseInt(num2, 10);
+    var sum = num1 * num2;
+    document.getElementById("result").innerHTML = sum;
+  }
+  function Div() {
+    var num1 = document.getElementById("inputNum1").value;
+    var num2 = document.getElementById("inputNum2").value;
+
+    num1 = parseInt(num1, 10);
+    num2 = parseInt(num2, 10);
+    var sum = num1 / num2;
+    document.getElementById("result").innerHTML = sum;
+  }
+</script>
